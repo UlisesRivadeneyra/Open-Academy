@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="openacademy_course_action_list" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">openacademy.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This is the form view of course-->
+    <record id="openacademy_course_form" model="ir.ui.view">
+        <field name="name">openacademy.course.view.form</field>
+        <field name="model">openacademy.course</field>
+        <field name="arch" type="xml">
+            <form string="Course Form">
+                <sheet>
+                    <group>
+                        <field name="title"></field>
+                    </group>
+                    <notebook>
+                        <page string="Description of the course">
+                            <field name="description"></field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record> 
+
+    <!-- This is the tree view of course-->
+    <record id="openacademy_course_tree" model="ir.ui.view">
+        <field name="name">openacademy.course.view.tree</field>
+        <field name="model">openacademy.course</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="title"></field>
+            </tree>
+        </field>
+    </record> 
+
+    <!-- This is the search bar view of course-->
+    <record id="openacademy_course_search" model="ir.ui.view">
+        <field name="name">openacademy.course.view.search</field>
+        <field name="model">openacademy.course</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="title"></field>
+                <field name="description"></field>
+            </search>
+        </field>
+    </record> 
+
+</odoo>
