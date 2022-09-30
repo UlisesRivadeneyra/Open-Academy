@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <menuitem id="open_academy_course_menu" name="Open Academy Courses" action="openacademy_course_action_list"/>
-    <menuitem id="open_academy_session_menu" name="Open Academy Sessions" action="session_list_action"/>
-
-</odoo>
