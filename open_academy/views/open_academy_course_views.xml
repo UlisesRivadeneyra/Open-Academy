@@ -11,16 +11,14 @@
         <field name="name">openacademy.course.view.form</field>
         <field name="model">openacademy.course</field>
         <field name="arch" type="xml">
-            <form string="Course Form">
+            <form>
                 <sheet>
                     <group>
                         <field name="title"></field>
+                        <field name="description"></field>
+                        <field name="responsible_user"></field>
+                        <field name="session_ids"></field>
                     </group>
-                    <notebook>
-                        <page string="Description of the course">
-                            <field name="description"></field>
-                        </page>
-                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -32,7 +30,8 @@
         <field name="model">openacademy.course</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="title"></field>
+                <field name="title"/>
+                <field name ="description"/>
             </tree>
         </field>
     </record> 

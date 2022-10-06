@@ -4,10 +4,10 @@
     <record id="session_list_action" model="ir.actions.act_window">
         <field name="name">Sessions</field>
         <field name="res_model">openacademy.session</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,calendar,form</field>
     </record>
 
-    <!-- This is the tree view of session-->
+    <!-- This is the form view of session-->
     <record id="openacademy_session_form" model="ir.ui.view">
         <field name="name">openacademy.session.form</field>
         <field name="model">openacademy.session</field>
@@ -21,10 +21,38 @@
                         <field name="seats"/>
                         <field name="course_id"/>
                         <field name="instructor_id"/>
+                        <field name="attendee_ids"/>
+                        <field name="taken_seats" widget="progressbar"/>
+                        <field name="active"/>
+                        <field name="start_date"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record> 
+
+    <record model="ir.ui.view" id="session_view_tree">
+        <field name="name">openacademy.session_view_tree</field>
+        <field name="model">openacademy.session</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="duration&lt;5" decoration-danger="duration&gt;15">
+                <field name="name" />
+                <field name="start_date"/>
+                <field name="duration"/>
+                <field name="instructor_id"/>
+                <field name="course_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open_academy_calendar_view" model="ir.ui.view">
+        <field name="name">openacademy.calendar.view</field>
+        <field name="model">openacademy.session</field>
+        <field name="arch" type="xml">
+            <calendar string="Session Calendar" date_start="start_date" date_stop="end_date" color="instructor_id">
+                <field name="name"/>
+            </calendar>
+        </field>    
+    </record>
 
 </odoo>
