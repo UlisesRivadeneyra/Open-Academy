@@ -5,6 +5,4 @@
     parent='open_academy_root_menu' action="openacademy_course_action_list"/>
     <menuitem id="open_academy_session_menu" name="Sessions" sequence="2"
     parent='open_academy_root_menu' action="session_list_action"/>
-    <menuitem id="open_academy_partner_menu" name="Partner" sequence="3" 
-    parent="open_academy_root_menu" action="openacademy_partner_action_list"/>
 </odoo>

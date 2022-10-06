@@ -17,11 +17,12 @@
         'security/ir.model.access.csv',
         'views/open_academy_course_views.xml',
         'views/open_academy_session_views.xml',
-        'views/open_academy_partner_views.xml',
+        'views/res_partner_views.xml',
         'views/open_academy_menu_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/open_academy_demo.xml'
+        'demo/open_academy_demo.xml',
+        'demo/res_partner_category_demo.xml',
     ],
 }
