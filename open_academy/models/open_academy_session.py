@@ -10,11 +10,17 @@ class Session(models.Model):
     attendee_ids = fields.Many2many('res.partner')
     attendees_count = fields.Integer(
 <<<<<<< HEAD
+<<<<<<< HEAD
         compute='_compute_attendees_count',
         store=True
     )
     color = fields.Integer()
     course_id = fields.Many2one('openacademy.course')
+=======
+        string="Attendees count", compute='_compute_attendees_count', store=True)
+    color = fields.Integer()
+    course_id = fields.Many2one('openacademy.course')    
+>>>>>>> main
 =======
         string="Attendees count", compute='_compute_attendees_count', store=True)
     color = fields.Integer()
@@ -38,7 +44,11 @@ class Session(models.Model):
         ]
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
     name = fields.Char(string="Session", required=True)
+=======
+    name = fields.Char(string="Session", required=True)    
+>>>>>>> main
 =======
     name = fields.Char(string="Session", required=True)    
 >>>>>>> main
@@ -51,6 +61,10 @@ class Session(models.Model):
             if not (record.start_date and record.end_date):
                 continue
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            
+>>>>>>> main
 =======
             
 >>>>>>> main
@@ -59,6 +73,7 @@ class Session(models.Model):
             record.duration = (end_date - start_date).days + 1
 
     def _inverse_set_hours(self):
+<<<<<<< HEAD
 <<<<<<< HEAD
         for record in self:
             record.duration = record.hours / 24
@@ -69,6 +84,8 @@ class Session(models.Model):
             record.attendees_count = len(record.attendee_ids)
 
 =======
+=======
+>>>>>>> main
         for r in self:
             r.duration = r.hours / 24
 
@@ -77,6 +94,9 @@ class Session(models.Model):
         for r in self:
             r.attendees_count = len(r.attendee_ids)
     
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     @api.depends('start_date', 'duration')
     def _compute_end_date(self):
@@ -91,8 +111,13 @@ class Session(models.Model):
     @api.depends('duration')
     def _compute_get_hours(self):
 <<<<<<< HEAD
+<<<<<<< HEAD
         for record in self:
             record.hours = record.duration * 24
+=======
+        for r in self:
+            r.hours = r.duration * 24
+>>>>>>> main
 =======
         for r in self:
             r.hours = r.duration * 24
@@ -111,7 +136,11 @@ class Session(models.Model):
         for record in self.filtered('instructor_id'):
             if record.instructor_id in record.attendee_ids:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 raise exceptions.ValidationError_("A session's instructor can't be an attendee.")
+=======
+                raise exceptions.ValidationError("A session's instructor can't be an attendee.")
+>>>>>>> main
 =======
                 raise exceptions.ValidationError("A session's instructor can't be an attendee.")
 >>>>>>> main
@@ -133,6 +162,10 @@ class Session(models.Model):
                 },
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 =======
 
 >>>>>>> main

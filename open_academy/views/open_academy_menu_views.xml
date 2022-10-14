@@ -6,8 +6,11 @@
     <menuitem id="open_academy_session_menu" name="Sessions" sequence="2"
     parent='open_academy_root_menu' action="session_list_action"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <menuitem id="menu_board_session" name="Session Dashboard" parent="base.menu_reporting_dashboard"
               action="open_board_session" sequence="3" />
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 </odoo>

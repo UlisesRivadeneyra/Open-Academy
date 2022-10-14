@@ -2,14 +2,20 @@
 <odoo>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
+=======
+>>>>>>> main
     <record id="session_list_action" model="ir.actions.act_window">
         <field name="name">Sessions</field>
         <field name="res_model">openacademy.session</field>
         <field name="view_mode">tree,calendar,form,gantt,graph,kanban</field>
     </record>
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     <!-- This is the form view of session-->
     <record id="openacademy_session_form" model="ir.ui.view">
@@ -35,7 +41,11 @@
         </field>
     </record> 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> main
 =======
 
 >>>>>>> main
@@ -53,7 +63,11 @@
         </field>
     </record>
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> main
 =======
 
 >>>>>>> main
@@ -65,9 +79,15 @@
                 <field name="name"/>
             </calendar>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </field>
     </record>
     
+=======
+        </field>    
+    </record>
+
+>>>>>>> main
 =======
         </field>    
     </record>
@@ -79,9 +99,14 @@
         <field name="arch" type="xml">
             <gantt string="Session Gantt" color="course_id"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 date_start="start_date"
                 date_stop="end_date"
                 default_group_by='instructor_id'>
+=======
+                    date_start="start_date" date_delay="hours"
+                    default_group_by='instructor_id'>
+>>>>>>> main
 =======
                     date_start="start_date" date_delay="hours"
                     default_group_by='instructor_id'>
@@ -103,6 +128,7 @@
     </record>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <record id="view_openacad_session_kanban" model="ir.ui.view" >
         <field name="name">openacad.session.kanban</field>
         <field name="model">openacademy.session</field>
@@ -116,6 +142,8 @@
                             oe_kanban_global_click_edit oe_semantic_html_override
                             oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
 =======
+=======
+>>>>>>> main
     <record model="ir.ui.view" id="view_openacad_session_kanban">
         <field name="name">openacad.session.kanban</field>
         <field name="model">openacademy.session</field>
@@ -128,6 +156,9 @@
                                 t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
                                               oe_kanban_global_click_edit oe_semantic_html_override
                                               oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
                             <div class="oe_dropdown_kanban">
                                 <!-- dropdown menu -->
@@ -140,7 +171,11 @@
                                         <li>
                                             <ul class="oe_kanban_colorpicker"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             data-field="color"/>
+=======
+                                                data-field="color"/>
+>>>>>>> main
 =======
                                                 data-field="color"/>
 >>>>>>> main
@@ -167,6 +202,7 @@
         </field>
     </record>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <record id="session_list_action" model="ir.actions.act_window">
         <field name="name">Sessions</field>
@@ -174,6 +210,8 @@
         <field name="view_mode">tree,calendar,form,gantt,graph,kanban</field>
         <field name="view_id" ref="openacademy_session_view_tree"/>
     </record>
+=======
+>>>>>>> main
 =======
 >>>>>>> main
 </odoo>

@@ -6,6 +6,7 @@ class Course(models.Model):
     _description = "Course"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     title = fields.Char(string="Course name", required=True)
     description = fields.Text(string="Description of the course")
     responsible_user_id = fields.Many2one(
@@ -13,6 +14,11 @@ class Course(models.Model):
         ondelete="set null",
         string="Resonsible of the course"
     )
+=======
+    title = fields.Char(string="Course", required=True)
+    description = fields.Text()
+    responsible_user_id = fields.Many2one("res.users", ondelete="set null")
+>>>>>>> main
 =======
     title = fields.Char(string="Course", required=True)
     description = fields.Text()
