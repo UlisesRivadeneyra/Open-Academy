@@ -5,9 +5,13 @@ class Course(models.Model):
     _name = "openacademy.course"
     _description = "Course"
 
-    title = fields.Char(string="Course", required=True)
-    description = fields.Text()
-    responsible_user_id = fields.Many2one("res.users", ondelete="set null")
+    title = fields.Char(string="Course name", required=True)
+    description = fields.Text(string="Description of the course")
+    responsible_user_id = fields.Many2one(
+        "res.users",
+        ondelete="set null",
+        string="Resonsible of the course"
+    )
     session_ids = fields.One2many(
         "openacademy.session", inverse_name="course_id")
 

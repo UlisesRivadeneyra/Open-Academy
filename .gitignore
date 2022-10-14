@@ -23,6 +23,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+wkhtmltox_0.12.5-1.bionic_amd64.deb
 
 # Installer logs
 pip-log.txt
