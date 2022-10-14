@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="odoo_course" model="openacademy.course">
+            <field name="title">Odoo Course</field>
+            <field name="description">This is the Odoo course</field>
+        </record>
+        <record id="xml_course" model="openacademy.course">
+            <field name="title">XML course</field>
+            <field name="description">This is the XML course</field>
+        </record>
+        <record id="psl_course" model="openacademy.course">
+            <field name="title">PSQL Course</field>
+            <field name="description">This is the PSQL course</field>
+        </record>
+</odoo>
